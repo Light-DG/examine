@@ -6,6 +6,7 @@
 
 void menu();
 DuLNode *list1(DuLNode *head);
+int IsNull(DuLNode *head); 
 
 int main()
 {
@@ -30,6 +31,12 @@ int main()
 	   }
 	   else if(opnum==4)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int num=0;
 	   	printf("要插在 第__个 节点之前？请输入：");
 		scanf("%d",&num);
@@ -71,6 +78,12 @@ int main()
 	   }
 	   else if(opnum==5)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int num=0;
 	   	printf("要插在 第__个（0~最大值） 节点之后？请输入：");
 		scanf("%d",&num);
@@ -101,11 +114,23 @@ int main()
 	   }
 	   else if(opnum==6)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	TraverseList_DuL(head, visit);
 	   	menu();
 	   }
 	   else if(opnum==7)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int num=0;
 	   	printf("要删除 第__个（1~最大值） 节点？请输入：");
 		scanf("%d",&num);
@@ -173,6 +198,9 @@ DuLNode *list1(DuLNode *head)
 	
 }
 
-
+int IsNull(DuLNode *head)
+{
+	return head==NULL;
+ } 
 
 
