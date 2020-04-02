@@ -6,6 +6,7 @@
 void menu();
 LNode *list1(LNode *head);
 LNode *list2(LNode *head);
+int IsNull(LNode *head); 
 
 int main()
 {
@@ -39,6 +40,12 @@ int main()
 	   }
 	   else if(opnum==5)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int num=0;
 	   	printf("要插在 第__个（0~最大值） 节点之后？请输入：");
 		scanf("%d",&num);
@@ -69,6 +76,12 @@ int main()
 	   }
 	   else if(opnum==6)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int num=0;
 	   	printf("要删除 第__个 节点？请输入：");
 		scanf("%d",&num);
@@ -96,6 +109,12 @@ int main()
 	   }
 	   else if(opnum==7)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	int e=0;
 	   	printf("请输入你要查找的值：");
 	   	scanf("%d",&e);
@@ -104,16 +123,34 @@ int main()
 	   }
 	   else if(opnum==9)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	ReverseList(&head);
 	   	menu();
 	   }
 	   else if(opnum==8)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	 TraverseList(head,visit); 
 	   	 menu();
 	   }
 	   else if(opnum==10)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	LNode *temp;
 	   	temp=FindMidNode(&head);
 	   	printf("中间结点的值为%d\n",temp->data);
@@ -121,11 +158,23 @@ int main()
 	   }
 	   else if(opnum==11)
 	   {
+	   	if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   	 IsLoopList(head);
 	   	 menu();
 	   }
 	   else if(opnum==12)
 	   {
+	   		if(IsNull(head))
+	   	{
+	   		printf("该链表已销毁或未初始化，请重新输入指令：");
+			scanf("%d",&opnum);
+			continue; 
+		}
 	   		ReverseEvenList(&head);
 	   		menu();
 	   }
@@ -202,5 +251,10 @@ LNode *list2(LNode *head)
 	return head;
 	
 }
+
+int IsNull(LNode *head)
+{
+	return head==NULL;
+ } 
 
 
