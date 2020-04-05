@@ -5,6 +5,15 @@
 
 void final_caculate(char *mid,int len)
  {
+ 	for(int i=0;i<len;i++)
+ 	{
+ 		if(mid[i]=='/'&&mid[i+1]=='0')
+ 		{
+ 			printf("\n²»ÄÜ³ý0£¡\n");
+ 			return;
+		 }
+	 }
+ 	
  	char *rear;
     rear=(char *)malloc(sizeof(char)*len);
     
