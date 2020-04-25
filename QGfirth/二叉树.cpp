@@ -139,17 +139,13 @@ int main(){
 	    }
 	   else if(opnum==8)
 	   {
-	   	if(IsNull(t))
-	   	 {
-	   	 	scanf("%d",&opnum);
-	   	 	continue;
-			}
 		 char *s,*front;
 		 s=(char *)malloc(sizeof(char)*N);
 		 printf("请输入正确的中缀表达式：");
 		 scanf("%s",s);
 		 front = Conver(s);
 		 printf("前缀表达式为：%s\n",front);
+		 index=0;
 		 BiTNode *temp = Build(front);
 		 int ans = Calculate(temp);
 		 printf("结果为：%d\n",ans);
@@ -207,7 +203,7 @@ void menu()
 {
 	printf("\n\n*************************************************\n");
     	printf("*  1.初始化                                      *\n");
-    	printf("*  2.创建树(固定)                                *\n");
+    	printf("*  2.创建树(先序)                                *\n");
     	printf("*  3.先序遍历                                    *\n");
     	printf("*  4.中序遍历                                    *\n");
     	printf("*  5.后序遍历                                    *\n");
