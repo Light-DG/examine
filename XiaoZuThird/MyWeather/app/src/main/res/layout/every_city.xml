@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="340dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rec_blue">
+
+        <LinearLayout
+            android:id="@+id/top_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginBottom="1dp"
+                android:id="@+id/text_history_cityname"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="50dp"
+                android:text="沈阳"
+                android:textSize="50dp"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_marginBottom="35dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_history_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="50dp"
+                    android:text="13℃"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/text_history_minandmax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24℃~8℃"
+                    android:textSize="25dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@id/text_history_temp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="380dp"
+            android:layout_height="5dp"
+            android:background="#87CEFF"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/top_part"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line">
+
+            <TextView
+                android:id="@+id/text_history_wea"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="多云"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/text_history_wind"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="东南风10级"
+                android:textSize="20dp"
+                android:layout_marginLeft="13dp"/>
+
+            <TextView
+                android:id="@+id/text_history_searchtime"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="2020-12-28 12:30"
+                android:textSize="15dp"
+                android:layout_gravity="end"
+                android:layout_marginLeft="25dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="5dp"
+       android:layout_below="@id/content"/>
+
+
+
+</RelativeLayout>

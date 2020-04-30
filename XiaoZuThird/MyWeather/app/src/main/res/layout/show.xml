@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/show_bg_">
+
+    <TextView
+        android:id="@+id/text_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="东莞"
+        android:textSize="80dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/text_temp_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_city_name"
+        android:layout_centerHorizontal="true"
+        android:text="23℃"
+        android:textSize="60dp"/>
+
+    <TextView
+        android:id="@+id/text_max_and_min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29℃ / 20℃"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_temp_now"/>
+
+    <TextView
+        android:id="@+id/wea_and_air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多云 空气质量：60"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_max_and_min_temp"/>
+
+    <TextView
+        android:id="@+id/text_win_and_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="东南风   1级"
+        android:textSize="30dp"
+        android:layout_below="@id/wea_and_air"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

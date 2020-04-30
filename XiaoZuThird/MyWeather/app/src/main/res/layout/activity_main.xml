@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_paper_bg">
+
+    <LinearLayout
+        android:id="@+id/sreach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_text"
+            android:hint="在此输入城市(不必输入 '市','县')"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_search"
+            android:text="搜索"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_main_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25℃"
+        android:textSize="50dp"
+        android:layout_below="@id/sreach"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/text_main_cityname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京"
+        android:textSize="40dp"
+        android:layout_below="@id/text_main_temp"
+        android:layout_alignLeft="@id/text_main_temp"/>
+
+    <TextView
+        android:id="@+id/text_main_wea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多云"
+        android:textSize="40dp"
+        android:layout_below="@id/text_main_cityname"
+        android:layout_alignLeft="@id/text_main_cityname"/>
+
+    <TextView
+        android:id="@+id/text_main_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="东北风12级 |"
+        android:textSize="30dp"
+        android:layout_below="@id/text_main_wea"
+        android:layout_marginLeft="10dp"/>
+
+   <TextView
+       android:id="@+id/text_main_minandmaxtemp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="31℃~15℃"
+       android:textSize="30dp"
+       android:layout_toRightOf="@id/text_main_wind"
+       android:layout_alignBottom="@id/text_main_wind"/>
+
+    <ImageView
+        android:id="@+id/image_main_wea"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/qing"
+        android:layout_marginTop="66dp"
+        android:layout_marginLeft="220dp"/>
+
+
+    <Button
+        android:id="@+id/button_my_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前城市"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_history"
+        android:layout_below="@id/button_my_city"
+        android:layout_centerHorizontal="true"
+        android:text="查询历史"/>
+
+
+</RelativeLayout>
